@@ -1,11 +1,15 @@
 export default {
   save(state, payload){
-    const job = {
+    const coache = {
       name: payload.name
     }
-    state.jobs.push(job);
+    state.coaches.push(coache);
   },
   coaches(state, payload){
     state.coaches = payload;
+  },
+  searching(state, payload){
+    console.log(payload);
+    state.searching = payload;
   }
 }

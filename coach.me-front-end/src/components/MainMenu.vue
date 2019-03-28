@@ -2,7 +2,7 @@
     <div class="menu">
         <div class="menu-logo">
             <a class="#">Coach</a>
-                        <p style="position:absolute; width: 180px; font-size: 15px; top: 44px;">or share expericences</p>
+                        <p style="position:absolute; width: 180px; font-size: 15px; top: 27px;">or share expericences</p>
 
             <svg viewBox='0 0 105 105'>
                 <path d='M 25,60

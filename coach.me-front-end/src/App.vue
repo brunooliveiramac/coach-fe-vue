@@ -22,6 +22,7 @@
 <script>
 
     import MainMenu from './components/MainMenu.vue';
+    import '../static/js/lodash.min.js';
 
     export default {
         components: {

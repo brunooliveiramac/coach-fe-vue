@@ -9,7 +9,8 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    coaches: []
+    coaches: [],
+    searching: ''
   },
   getters: getters,
   mutations: mutations,

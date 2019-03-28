@@ -7,6 +7,7 @@ html,
 body {
   background-color: #F2F1F1;
   height: 100%;
+  font-size: 14px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -52,7 +53,7 @@ img {
 }
 
 .menu-logo {
-  font-size: 36px;
+  font-size: 27px;
   font-weight: bold;
   margin: 0 10px;
   color: white;
@@ -65,7 +66,7 @@ img {
 }
 
 .menu-nav a {
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   display: block;
   padding: 10px;
@@ -83,8 +84,8 @@ img {
 svg {
   height: 60px;
   width: 60px;
-  bottom: 15px;
-  left: 95px;
+  bottom: 10px;
+  left: 70px;
   position: absolute;
 }
 
@@ -193,28 +194,6 @@ a {
   max-height: 200px;
   background-size: cover;
   padding: 2px;
-}
-
-.job-company {
-  position: relative;
-  text-align: center;
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.job-role {
-  text-align: center;
-  font-size: 17px;
-}
-
-.job-location {
-  text-align: center;
-  font-size: 17px;
-}
-
-.job-quantity {
-  text-align: center;
-  font-size: 17px;
 }
 
 /* END  JOBS */

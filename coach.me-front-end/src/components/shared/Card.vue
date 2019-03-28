@@ -3,15 +3,27 @@
 
         <div class="col-sm-12">
 
-            <div class="card-coach">
+            <div class="card-coach"> 
                     <div class="img-session">
                         <img  src="static/images/img_avatar.png" alt="Avatar" 
                         class="rounded col-sm-6" style="padding:10px">
-                    </div>    
+                        <div style="display: flex;align-items: center;"> 
+                            <span style="color:#00D48D; 
+                            padding: 2px;
+                            font-size: 16px;
+                            letter-spacing: 1.1px;
+                            font-weight: 700;
+                            width: auto; 
+                            margin: 0 auto">Free</span>
+                        </div>    
+                    </div>  
+                    
+  
+                    <div class="card-item-session">
 
-                        <div>
+                        <div class="card-name">
                             <h3 style="margin-top: 10px">
-                                <b style="margin-left: 15px; margin-right:10px; float: left">John</b>
+                                <b>{{name}}</b>
                             </h3> 
                         </div>
                         <div class="evaluation-session">
@@ -22,27 +34,29 @@
                             <span class="fa fa-star checked"></span>    
                         </div>    
 
-                    <div class="card-item-session">
-
-                                <div style="padding:5px; text-align:center">
+                                <div style="padding: 15px;
+                                            display: flex;
+                                            flex-wrap: wrap; 
+                                            text-align: center;
+                                            justify-content: space-between;">
                                     <div class="small-card">
                                         <div class="card no-hover">
                                             <div class="card-body">
-                                            <b style="color:#818688"> Carrer </b>
+                                                <b style="color:#818688"> Carreira </b>
                                             </div>
                                         </div>
                                     </div>   
                                     <div class="small-card">
                                         <div class="card  no-hover">
                                             <div class="card-body">
-                                            <b style="color:#818688"> Personal </b>
+                                            <b style="color:#818688"> Pessoal </b>
                                             </div>
                                         </div>
                                     </div>  
                                     <div class="small-card">
                                         <div class="card no-hover">
                                             <div class="card-body">
-                                            <b style="color:#818688"> Academic </b>
+                                            <b style="color:#818688"> Acadêmico </b>
                                             </div>
                                         </div>
                                     </div> 
@@ -51,13 +65,13 @@
                                 <div class="card-coach-description">
                                     <div>
                                         <p style="margin-left: 15px;  line-height: 1.8">  
-                                            ellentesque vitae rhoncus metus. Vestibulum vitae dui ante. Donec gravida nulla vitae pulvinar pharetra. Etiam ut sollicitudin risus. Fusce viverra est eget ante porta, sit amet suscipit eros pharetra. Aliquam vitae ligula et augue ullamcorper congue vitae vel lectus. Phasellus commodo
+                                            ellentesque vitae rhoncus metus. Vestibulum vitae dui ante. Donec gravida nulla vitae pulvinar pharetra. Etiam ut sollicitudin risus. Fusce viverra est eget ante porta, sit amet suscipit eros pharetra. Aliquam vitae ligula et augue ullamcorper congue vitae vel lectus. Phasellus commodo Donec gravida nulla vitae pulvinar pharetra. Etiam  Donec gravida nulla vitae pulvinar pharetra. Etiam  Donec gravida nulla vitae pulvinar pharetra. Etiam  Donec gravida nulla vitae pulvinar pharetra. Etiam  Donec gravida nulla vitae pulvinar pharetra. Etiam  Donec gravida nulla vitae pulvinar pharetra. Etiam  Donec gravida nulla vitae pulvinar pharetra. Etiam 
                                         </p> 
                                     </div>
 
                                     <div>
                                         <div>
-                                            <p style="margin-left: 15px;margin-bottom: 15px; position: relative; color:#00aaf4; cursor: pointer">Read more</p> 
+                                            <p style="margin-left: 15px;margin-bottom: 15px; position: relative; color:#00aaf4; cursor: pointer">Leia mais</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -71,11 +85,16 @@
 
 <script>
     export default {
-        name: "card"
+        name: "card",
+        props: ['name']
     }
 </script>
 
 <style scoped>
+
+    .card-body {
+        padding: 0.5rem !important;
+    }
 
     .card-item-session {
         float: left;
@@ -90,7 +109,7 @@
     }
     .checked {
       color: orange;
-      font-size: 27px;
+      font-size: 22px;
     }
 
     .card {
@@ -143,25 +162,37 @@
         display: inline;
     }
 
+    .card-name b {
+        margin-left: 15px; 
+        margin-right:10px; 
+        float: left;
+    }
+
 
     @media screen and (min-width: 740px) {
-        .card-coach img{
+        .img-session{
             float: left;
-            max-width: 210px;
-            max-height: 210px;
-            min-width: 210px;
-            min-height: 210px;
         }
-
+        .card-coach img{
+            max-width: 190px;
+            max-height: 190px;
+            min-width: 190px;
+            min-height: 190px;
+        }
+        
     }
 
    @media screen and (max-width: 739px) {
         .card-coach img{
-            max-width: 210px;
-            max-height: 210px;
-            min-width: 210px;
-            min-height: 210px;
+            max-width: 190px;
+            max-height: 190px;
+            min-width: 190px;
+            min-height: 190px;
             margin: 0 auto;
+        }
+
+        .evaluation-session {
+            text-align: center;
         }
 
         .card-coach ul {
@@ -173,6 +204,7 @@
             display: block;
             margin: 0 auto;
             float: none;
+            width: 90%;
         }
 
         .smartphone {
@@ -181,6 +213,14 @@
         .small-card {
             width: 100%;
             display: block;
+        }
+
+        .card-name {
+            text-align: center;
+        }
+
+        .card-name b {
+            float: none;
         }
 }
 
